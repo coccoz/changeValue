@@ -11,7 +11,7 @@
         $numLink = 5;
 
         for ($i=1; $i < $numLink; $i++) { 
-            echo("<a href='$linkBase . / . $i' target='_blank' rel='noopener noreferrer'>Pagina $i</a><br>");
+            echo("<a href='$linkBase/$i' target='_blank' rel='noopener noreferrer'>Pagina $i</a><br>");
         }
     ?>
 
