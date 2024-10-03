@@ -7,14 +7,11 @@
 </head>
 <body>
     <?php
-        $size = 20;
-        $num = 13;
-        $s = $size . "px";
+        $linkBase = "https://xkcd.com";
+        $numLink = 5;
 
-        for ($i=0; $i < $num; $i++) { 
-            echo("<p style='font-size: $s'>prova</p>");
-            $size += 2;
-            $s = $size . "px";
+        for ($i=1; $i < $numLink; $i++) { 
+            echo("<a href='$linkBase . / . $i' target='_blank' rel='noopener noreferrer'>Pagina $i</a><br>");
         }
     ?>
 
