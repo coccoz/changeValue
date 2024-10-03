@@ -7,12 +7,32 @@
 </head>
 <body>
     <?php
-        $linkBase = "https://xkcd.com";
-        $numLink = 5;
+        function scegliColore($in)
+        {
+            switch($in)
+            {
+                case "r":
+                    return "red";
+                break;
 
-        for ($i=1; $i < $numLink; $i++) { 
-            echo("<a href='$linkBase/$i' target='_blank' rel='noopener noreferrer'>Pagina $i</a><br>");
+                case "g":
+                    return "green";
+                break;
+
+                case "b":
+                    return "blue";
+                break;
+
+                default:
+                    return "black";
+                break;
+            }
+
         }
+
+        $c = scegliColore("g");
+
+        echo("<p style='color: $c'>Questo paragrafo ha la proprietà color con valore XXX</p>");
     ?>
 
 </body>
