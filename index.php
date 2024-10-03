@@ -7,14 +7,15 @@
 </head>
 <body>
     <?php
-        $r = rand(0,255);
-        $g = rand(0,255);
-        $b = rand(0,255);
-        $nome = "gianni";
-        $color = "rgb($r, $g, $b)";
+        $size = 20;
+        $num = 13;
+        $s = $size . "px";
 
-        echo"<h1 style='color: $color'>$nome</h1>";
-
+        for ($i=0; $i < $num; $i++) { 
+            echo("<p style='font-size: $s'>prova</p>");
+            $size += 2;
+            $s = $size . "px";
+        }
     ?>
 
 </body>
