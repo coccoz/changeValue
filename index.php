@@ -7,32 +7,17 @@
 </head>
 <body>
     <?php
-        function scegliColore($in)
+        function generaUrlImmagine($w, $h)
         {
-            switch($in)
-            {
-                case "r":
-                    return "red";
-                break;
-
-                case "g":
-                    return "green";
-                break;
-
-                case "b":
-                    return "blue";
-                break;
-
-                default:
-                    return "black";
-                break;
-            }
-
+            return "https://picsum.photos/$w/$h";
         }
 
-        $c = scegliColore("g");
+        $i = generaUrlImmagine("1900", "900");
 
-        echo("<p style='color: $c'>Questo paragrafo ha la proprietà color con valore XXX</p>");
+        //echo("<a href='$i'>immagine</a>");
+
+        echo("<img src='$i' alt='alternatetext'>")
+        
     ?>
 
 </body>
