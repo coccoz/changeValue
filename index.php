@@ -8,34 +8,11 @@
 <body>
     <?php
 
-        $num = 50;
-        $tipe = "tipo";
-
-        function stampaLista($n, $t)
-        {
-            if($t=="o")
-            {
-                $lista="ol";
-            }
-            else
-            {
-                $lista="ul";
-            }
-            
-            echo"<$lista>";
-
-            for ($i=0; $i <= $n; $i++) 
-            { 
-                if($i%2==0||$i%5==0)
-                {
-                    echo"<li>$i</li>";
-                }
-            }
-
-            echo"<$lista>";
-        }
-
-        stampaLista($num, $tipe);
+    $num=rand(10,20);
+    for ($i=0; $i<=$num; $i++) 
+    { 
+        $list=[$i];
+    }
 
 
     ?>
