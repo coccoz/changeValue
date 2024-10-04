@@ -8,31 +8,35 @@
 <body>
     <?php
 
-    $lu = rand(50,500);
+        $num = 50;
+        $tipe = "tipo";
 
-        function sfondoCasuale($l)
+        function stampaLista($n, $t)
         {
-            if($l<150)
+            if($t=="o")
             {
-                return "#7FFFD4";
+                $lista="ol";
             }
-            else if($l>=150&&$l<=250)
+            else
             {
-                return "#1E90FF";
+                $lista="ul";
             }
-            else if($l>250)
-            {
-                return "#0000FF";
+            
+            echo"<$lista>";
+
+            for ($i=0; $i <= $n; $i++) 
+            { 
+                if($i%2==0||$i%5==0)
+                {
+                    echo"<li>$i</li>";
+                }
             }
+
+            echo"<$lista>";
         }
 
-        $ris = sfondoCasuale($lu);
+        stampaLista($num, $tipe);
 
-        $h = $lu * 2 . "px";
-
-        $lun = $lu . "px";
-
-        echo("<div style='width: $lun; height: $h; background-color: $ris'>prova</div>");
 
     ?>
 
