@@ -7,17 +7,33 @@
 </head>
 <body>
     <?php
-        function generaUrlImmagine($w, $h)
+
+    $lu = rand(50,500);
+
+        function sfondoCasuale($l)
         {
-            return "https://picsum.photos/$w/$h";
+            if($l<150)
+            {
+                return "#7FFFD4";
+            }
+            else if($l>=150&&$l<=250)
+            {
+                return "#1E90FF";
+            }
+            else if($l>250)
+            {
+                return "#0000FF";
+            }
         }
 
-        $i = generaUrlImmagine("1900", "900");
+        $ris = sfondoCasuale($lu);
 
-        //echo("<a href='$i'>immagine</a>");
+        $h = $lu * 2 . "px";
 
-        echo("<img src='$i' alt='alternatetext'>")
-        
+        $lun = $lu . "px";
+
+        echo("<div style='width: $lun; height: $h; background-color: $ris'>prova</div>");
+
     ?>
 
 </body>
