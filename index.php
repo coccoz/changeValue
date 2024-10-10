@@ -6,23 +6,49 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        table
+        {
+            margin-top: 110px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
 
-
-    <?php
-        $domanda = "Qual è il pianeta più vicino al sole?";
-        $risposte = ["Venere", "Terra", "Marte", "Mercurio", "Giove"];
-
-        echo("<p><b><i>$domanda</p></b></i>");
-
-        echo("<br>");
-
-        for ($i=0; $i < sizeof($risposte); $i++) { 
-            echo("<input type='radio' name='risposte' id='pianeti' value='risposta'/>
-            <label for='pianeti'>$risposte[$i]</label> <br>"
-        );
-            
         }
 
+        td, th
+        {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    
+
+    <?php
+       
+        $indirizzo = "via della colombella";
+        $mq = 110.4;
+        $prezzomq = 140.6;
+        $prezzo = $mq * $prezzomq;
+
+        $casa = ["indirizzo" => $indirizzo, "metri quadri" => $mq, "prezzo al metro quadro" => $prezzomq, "prezzo totale" => $prezzo];
+
+        echo("<table>");
+        echo("<tr>");
+        foreach($casa as $key => $v)
+        {
+            echo("<th>$key</th>");
+        };
+        echo("</tr>");
+        echo("</tr>");
+        foreach($casa as $value)
+        {
+            echo("<td>$value</td>");
+        };
+        echo("</tr>");
+        echo("</table>")
 
     ?>
 
