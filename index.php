@@ -7,23 +7,16 @@
 </head>
 <body>
 
-    <select name="filmpreferito" id="cars">
 
-        <?php
+    <?php
+        $domanda = "Qual è il pianeta più vicino al sole?";
+        $risposte = ["Venere", "Terra", "Marte", "Mercurio", "Giove"];
 
-            $film = ["l'impero colpisce ancora", 'fast and furious', 'inside out', 'amici miei', 'cars 2'];
-            $fi = 0;
-
-            for ($i=0; $i < sizeof($film); $i++) 
-            { 
-                $fi = "f" . $i;
-                echo("<option value='$fi'>$film[$i]</option>");
-            }
+        
 
 
-        ?>
+    ?>
 
-    </select>
 
 </body>
 </html>
