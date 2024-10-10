@@ -6,16 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
 
-    $num=rand(10,20);
-    for ($i=0; $i<=$num; $i++) 
-    { 
-        $list=[$i];
-    }
+    <select name="filmpreferito" id="cars">
+
+        <?php
+
+            $film = ["l'impero colpisce ancora", 'fast and furious', 'inside out', 'amici miei', 'cars 2'];
+            $fi = 0;
+
+            for ($i=0; $i < sizeof($film); $i++) 
+            { 
+                $fi = "f" . $i;
+                echo("<option value='$fi'>$film[$i]</option>");
+            }
 
 
-    ?>
+        ?>
+
+    </select>
 
 </body>
 </html>
