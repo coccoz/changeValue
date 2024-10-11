@@ -25,12 +25,12 @@
         {
             if (is_array($value)) //vedo se questo campo è un array
             {
-                echo "<li>$key: <ul>";
+                echo "<li>$key: <ol>";
                 foreach ($value as $voto) 
                 {
                     echo "<li>$voto</li>";
                 }
-                echo "</ul></li>";
+                echo "</ol></li>";
             } 
             else //se non e un array stampo normalmente
             {
