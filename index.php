@@ -24,7 +24,7 @@
         {
             if (is_array($value)) //vedo se questo campo è un array
             {
-                echo "<li>$key: <ol>";
+                echo "<li>lista voti: <ol>";
                 foreach ($value as $voto) 
                 {
                     echo "<li>$voto</li>";
