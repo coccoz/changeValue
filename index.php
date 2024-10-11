@@ -11,13 +11,12 @@
         $cognome = "ballerini";
         $nome = "cosimo";
         $listaVoti = [];
-        $testo = "lista voti: ";
 
         for ($i = 0; $i < 5; $i++) { 
             $listaVoti[$i] = rand(2, 10);
         }
 
-        $studente = ["cognome" => $cognome, "nome" => $nome, "testo" => $testo, "listaVoti" => $listaVoti];
+        $studente = ["cognome" => $cognome, "nome" => $nome, "listaVoti" => $listaVoti];
 
         echo "<ul>";
 
