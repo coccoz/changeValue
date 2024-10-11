@@ -6,52 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
-        table
-        {
-            margin-top: 110px;
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        td, th
-        {
-            padding: 10px;
-            border: 1px solid black;
-        }
-    </style>
     
-
     <?php
-       
-        $indirizzo = "via della colombella";
-        $mq = 110.4;
-        $prezzomq = 140.6;
-        $prezzo = $mq * $prezzomq;
+        $cognome = "ballerini";
+        $nome = "cosimo";
+        $listaVoti = [];
+        $testo = "lista voti: ";
 
-        $casa = ["indirizzo" => $indirizzo, "metri quadri" => $mq, "prezzo al metro quadro" => $prezzomq, "prezzo totale" => $prezzo];
+        for ($i = 0; $i < 5; $i++) { 
+            $listaVoti[$i] = rand(2, 10);
+        }
 
-        echo("<table>");
-        echo("<tr>");
-        foreach($casa as $key => $v)
+        $studente = ["cognome" => $cognome, "nome" => $nome, "testo" => $testo, "listaVoti" => $listaVoti];
+
+        echo "<ul>";
+
+        foreach ($studente as $key => $value) 
         {
-            echo("<th>$key</th>");
-        };
-        echo("</tr>");
-        echo("</tr>");
-        foreach($casa as $value)
-        {
-            echo("<td>$value</td>");
-        };
-        echo("</tr>");
-        echo("</table>")
+            if (is_array($value)) //vedo se questo campo è un array
+            {
+                echo "<li>$key: <ul>";
+                foreach ($value as $voto) 
+                {
+                    echo "<li>$voto</li>";
+                }
+                echo "</ul></li>";
+            } 
+            else //se non e un array stampo normalmente
+            {
+                echo "<li>$key: $value</li>";
+            }
+        }
 
+        echo "</ul>";
     ?>
-
 
 </body>
 </html>
