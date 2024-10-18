@@ -7,38 +7,12 @@
 </head>
 <body>
     
-    <?php
-        $cognome = "ballerini";
-        $nome = "cosimo";
-        $listaVoti = [];
-
-        for ($i = 0; $i < 5; $i++) { 
-            $listaVoti[$i] = rand(2, 10);
-        }
-
-        $studente = ["cognome" => $cognome, "nome" => $nome, "listaVoti" => $listaVoti];
-
-        echo "<ul>";
-
-        foreach ($studente as $key => $value) 
-        {
-            if (is_array($value)) //vedo se questo campo è un array
-            {
-                echo "<li>lista voti: <ol>";
-                foreach ($value as $voto) 
-                {
-                    echo "<li>$voto</li>";
-                }
-                echo "</ol></li>";
-            } 
-            else //se non e un array stampo normalmente
-            {
-                echo "<li>$key: $value</li>";
-            }
-        }
-
-        echo "</ul>";
-    ?>
+    <form action="riepilogo.php" method="GET">
+    Nome: <input type="text" name="name"><br>
+    Cognome: <input type="text" name="surname"><br>
+    Email: <input type="text" name="email"><br>
+    <input type="submit">
+    </form>
 
 </body>
 </html>
