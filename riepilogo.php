@@ -9,22 +9,25 @@
 
     }
 
-    table, th, tr
+    table, th, td
     {
         border: solid 1px black;
         border-collapse: collapse;
+        margin-right: auto;
+        margin-left: auto;
     }
 </style>
 
 <body>
 
-<h1>Dati inviati: </h1>
+
 <?php 
+echo "<h1>Dati inviati: </h1>";
     echo "<table>";
         echo "<tr>";
-            echo "<th>Company</th>";
-            echo "<th>Contact</th>";
-            echo "<th>Country</th>";
+            echo "<th>Nome</th>";
+            echo "<th>Cognome</th>";
+            echo "<th>Email</th>";
         echo "</tr>";
         echo "<tr>";
             echo "<td>"; echo $_GET['name'];echo "</td>";
