@@ -27,8 +27,6 @@ if (empty($n1) || empty($n2)) {
     echo '<p class="error">Errore: almeno uno dei due numeri è vuoto</p>';
     echo '<a href="numeri.html">Torna indietro</a>';
 } else {
-    $n1 = intval($n1);
-    $n2 = intval($n2);
 
     echo '<h3>Numeri inseriti:</h3>';
     echo '<ul>';
