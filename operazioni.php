@@ -39,7 +39,7 @@ if (empty($n1) || empty($n2)) {
     $addizione = $n1 + $n2;
     $sottrazione = $n1 - $n2;
     $moltiplicazione = $n1 * $n2;
-    $divisione = $n2 != 0 ? $n1 / $n2 : 'Impossibile';
+    $divisione = $n1 / $n2;
 
     echo '<h3>Risultati delle operazioni:</h3>';
     echo '<table>';
@@ -47,7 +47,7 @@ if (empty($n1) || empty($n2)) {
     echo '<tr><td>Addizione</td><td>' . $addizione . '</td></tr>';
     echo '<tr><td>Sottrazione</td><td>' . $sottrazione . '</td></tr>';
     echo '<tr><td>Moltiplicazione</td><td>' . $moltiplicazione . '</td></tr>';
-    echo '<tr><td>Divisione</td><td>' . ($divisione === 'Impossibile' ? '<span class="impossible">' . $divisione . '</span>' : $divisione) . '</td></tr>';
+    echo '<tr><td>Divisione</td><td>' . $divisione . '</td></tr>';
     echo '</table>';
 }
 ?>
