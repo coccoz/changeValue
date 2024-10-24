@@ -21,12 +21,15 @@ echo "<p>Quantità: $quantita</p>";
 echo $oggetto_nuovo;
 echo "<p>Metodo di pagamento: $metodo</p>";
 
-echo "totale: " . intval($tot) . "<br><br>";
 
-
-if(!(isset($oggetto_nuovo)))
+if($oggetto_nuovo == "Oggetto usato")
 {
-    $tot -= ($tot/100)*20;
+    $tot = $tot - ($tot/100)*20;
+}
+
+if($metodo == "carta")
+{
+    $tot = $tot + 2;
 }
 
 echo "totale:  $tot";

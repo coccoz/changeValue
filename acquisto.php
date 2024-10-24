@@ -19,9 +19,8 @@
 
         Oggetto nuovo? <input type="checkbox" name="oggetto_nuovo"><br><br>
         Metodo di pagamento:<br><br>
-        <input type="radio" name="metodo" value="paypal">Paypal<br>
-        <input type="radio" name="metodo" value="visa">Visa<br>
-        <input type="radio" name="metodo" value="altro">Altro<br><br>
+        <input type="radio" name="metodo" value="carta">Carta<br>
+        <input type="radio" name="metodo" value="cont">Contanti<br><br>
         <input type="submit" value="Invia">
     </form>
 </body>
