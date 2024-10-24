@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risultati</title>
+    <title>Sondaggio</title>
 </head>
 <body>
+    <form action="gestione.php" method="GET">
 
-<?php
-$nome = $_GET['nome'];
-$cognome = $_GET['cognome'];
-$data_nascita = $_GET['data_nascita'];
-$orario_arrivo = $_GET['orario_arrivo'];
-$trasporto = $_GET['trasporto'];
+        Nome: <input type="text" name="nome"><br>
 
-if($_GET['corsi[]'] == null)
-{
-    $corsi = [];
-}
-else
-{
-    $corsi = $_GET['corsi[]'];
-}
+        Costo: <input type="text" name="cognome"><br>
 
-echo "<p>Nome: $nome</p>";
-echo "<p>Cognome: $cognome</p>";
-echo "<p>Data di nascita: $data_nascita</p>";
-echo "<p>Orario di arrivo a casa: $orario_arrivo</p>";
-echo "<p>Come vieni a scuola: $trasporto</p>";
+        Quantità: 
 
-if($corsi != null)
-{
-    echo "<p>Corsi pomeridiani seguiti:</p>";
-    echo "<ul>";
+        <select name="cars" id="cars" form="carform">
+            <option value="q1">1</option>
+            <option value="q2">2</option>
+            <option value="q3">3</option>
+            <option value="q5">5</option>
+            <option value="q10">10</option>
 
-    foreach ($corsi as $corso) {
-        echo "<li>$corso</li>";
-    }
-    echo "</ul>";
-    
-}
+        </select><br>
 
-?>
+        Oggetto nuovo? <input type="checkbox" name="orario_arrivo"><br>
 
+        Metodo di pagamento:<br>
+        <input type="radio" name="orario_arrivo"><br>
+        <input type="radio" name="orario_arrivo"><br>
+
+        <input type="submit" value="Invia">
+
+        
+
+    </form>
 </body>
 </html>
