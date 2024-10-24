@@ -6,31 +6,30 @@
     <title>Risultati</title>
 </head>
 <body>
-
 <?php
-$nome = $_POST['nome'];
-$costo = $_POST['cognome'];
-$quantita = $_POST['q'];
-$stato = $_POST['stato'];
-$metodo = $_POST['metodo'];
+$nome = $_POST["nome"];
+$costo = $_POST["costo"];
+$quantita = $_POST["quantita"];
+$oggetto_nuovo = isset($_POST["oggetto_nuovo"]) ? 'Oggetto non usato' : 'Oggetto usato';
+$metodo = $_POST["metodo"];
 
-if($_POST['corsi[]'] == null)
-{
-    $corsi = [];
-}
-else
-{
-    $corsi = $_POST['corsi[]'];
-}
+$tot = intval($costo) * intval($quantita);
 
 echo "<p>Nome: $nome</p>";
-echo "<p>Cognome: $cognome</p>";
-echo "<p>Quantità: $q</p>";
-echo "<p>Stato: $stato</p>";
+echo "<p>Costo: $costo</p>";
+echo "<p>Quantità: $quantita</p>";
+echo $oggetto_nuovo;
 echo "<p>Metodo di pagamento: $metodo</p>";
 
+echo "totale: " . intval($tot) . "<br><br>";
 
 
+if(!(isset($oggetto_nuovo)))
+{
+    $tot -= ($tot/100)*20;
+}
+
+echo "totale:  $tot";
 ?>
 
 </body>
