@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione</title>
+</head>
+
+<body>
+    <form action="gestioneprenotazione.php" method="POST">
+        Importo in euro: <input type="text" name="importo"><br><br>
+        Valuta:
+        <select name="tavolo" onchange="changePic(this.value)">
+            <option value="dol">dollaro</option>
+            <option value="y">yen</option>
+            <option value="fr">franchi svizzeri</option>
+            <option value="st">sterline</option>
+        </select><br><br>
+        <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="" id="img"><br><br>
+        <input type="submit" value="Invia">
+    </form>
+    <script>
+        function changePic(v) {
+            let pic = document.getElementById("img");
+            if (v == "dol") {
+                pic.src = "https://www.worldometers.info/img/flags/us-flag.gif";
+            } else if (v == "y") {
+                pic.src = "https://www.worldometers.info/img/flags/ja-flag.gif";
+            } else if (v == "fr") {
+                pic.src = "https://www.worldometers.info/img/flags/sz-flag.gif";
+            } else {
+                pic.src = "https://www.worldometers.info/img/flags/uk-flag.gif";
+            }
+        }
+    </script>
+</body>
+
+</html>
